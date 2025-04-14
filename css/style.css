@@ -1,0 +1,163 @@
+/* index */
+
+ *{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*-------------------------------header----------------------------------------------*/
+
+header{
+    background-color: #fada7a;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+width: 100%;
+}
+
+/* logo de la empresa*/
+
+header a img{
+    width: 200px;
+    height: auto;
+}
+
+/* menu de navegacion*/
+/* ruta de especificidad*/
+header nav ul{
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    text-align: center;
+    font-size: 28px;
+    margin-right: 20px;
+}
+
+header nav ul a{
+    text-decoration: none;
+    color: black;
+}
+
+nav{
+    display: flex;
+    list-style: none;
+}
+
+/*----------------------------------------------- estilos de main----------------------------------------------*/
+
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: white;
+}
+
+.text{
+    width: 50%;
+    color: #7E5CAD;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+h1{
+    font-size: 2.5em;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.subtitle{
+    font-size: 1em;
+    color: black;
+    margin-bottom: 15px;
+    display: block;
+    background: none;
+    padding: 0;
+}
+
+.cta-button{
+    background-color: #81BFDA;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+    align-self: flex-start;
+}
+
+.image{
+    width: 50%;
+    text-align: right;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/*ruta de especificidad para texto de presentacion de la empresa*/
+.presentacion{
+    color: #3f2b16; /*color texto*/
+    text-align: center; /*posicion*/
+    background-color: #fddbbb; /*relleno fondo*/
+    font-size: 26px;
+}
+
+
+/*modificacion a la seccion nuestros servicios*/
+/*huella de los subtitulos*/
+.imagen-subtitulos{
+    width: 60px;
+    height: auto;
+} 
+/*subtitulo nuestros servicios*/
+main section div h2{
+    background-color: #fada7a;
+    color: black;
+    padding: 10px 20px;
+    font-size: 30px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+
+/*ruta de especificidad de parrafos de servicios*/
+main section div p{
+    background-color: #81bfda;
+    color: white;
+    padding: 10px 20px;
+    font-size: 22px;
+    display: inline-block;
+    border-radius: 20px;
+}
+
+/*footer*/
+/* ruta de especificidad imagen de logo*/
+
+footer{
+    background-color: #fada7a;
+    display: flex;
+    align-items: center; 
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+footer img{
+    width: 200px;
+    height: auto;
+}
+
+/* ruta de especificidad de boton agenda cita y galeria*/
+footer button{
+    background-color: #81bfda; /*color fondo del boton*/
+    color: white; /*color del texto del boton en blanco*/
+    padding: 10px 20px; /*relleno del boton*/
+     border: none; /* son borde */
+    border-radius: 30px; /*Bordes redondos*/
+    font-size: 22px; /*tamaño del texto*/
+    cursor: pointer; /*Cmabio de cursor al pasar el raton*/
+}

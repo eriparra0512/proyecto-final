@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link de mi css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <title>A&A Pets Care-CONTACTO</title>
+</head>
+<body>
+    <header>
+        <a href="../index.html">
+            <img src="../img/marca.png" alt="Logotipo de proyecto pyppetscare">
+        </a>
+        <!-- etiqueta para menu de navegacion -->
+        <nav>
+            <!-- lista desordenda -->
+            <ul>
+                <li>
+                    <a href="../index.html">INICIO</a>
+                </li>
+                <li>
+                    <a href="../pages/nosotros.html">NOSOTROS</a>
+                </li>
+                <li>
+                    <a href="../pages/servicios.html">SERVICIOS</a>
+                </li>
+                <li>
+                    <a href="../pages/testimonios.html">TESTIMONIOS</a>
+                </li>
+                <li>
+                    <a href="">CONTACTO</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div>
+            <img src="../img/huella-marca-white.png" alt="icono de huella en un corazon">
+            <h2>NOS ENCANTA ESCUCHAR SOBRE TI</h2>
+            <h3> <em>Dejanos tu mensaje y nos pondremos en contacto contigo</em></h3>
+        </div>
+        <!-- etiqueta contenedora,  para formulario -->
+        <form action="/submit" method="post">
+            <label for="nombre">Nombre completo del responsable de la mascota</label>
+            <input type="text" name="nombre" id="nombre">
+
+            <label for="e-mail"> E-mail</label>
+            <input type="text" name="e-mail" id="e-mail">
+
+            <label for="telefono">Telefono</label>
+            <input type="text" name="telefono" id="telefono">
+
+            <label for="mensaje">Mensaje</label>
+            <textarea name="mensaje" id="mensaje"></textarea>
+        </form>
+
+        <form action="/submit" method="post">
+            <label for="nombre">Nombre de la mascota</label>
+            <input type="text" name="nombre" id="nombre">
+
+            <label for="edad">Edad de la mascota</label>
+            <input type="number" name="edad" id="edad" min="0" max="50" required>
+
+            <label for="mascota">Especie de la mascota </label>
+            <select name="" id="">
+                <option value="">Seleccionar</option>
+                <option value="">Perro</option>
+                <option value="">Gato</option>
+                <option value="">Ave</option>
+            </select>
+
+            <label for="raza">Tipo de raza de la mascota</label>
+            <input type="text" name="raza" id="raza">
+
+            <label for="servicio">Servicio de interes</label>
+            <select name="" id="">
+                <option value="">Seleccionar</option>
+                <option value="">Cuidado diurno</option>
+                <option value="">Cuidado nocturno</option>
+                <option value="">Visita al hogar</option>
+                <option value="">Paseo para perro</option>
+            </select>
+            <!-- boton de envio -->
+            <input type="submit" value="Enviar">
+        </form>
+    </main>
+    <br>
+
+    <!-- etiqueta para pie de pagina-->
+    <footer>
+        <img src="../img/marca.png" alt="Logotipo de proyecto pyppetscare.">
+        <button>Agenda sin costo <br>nuestra visita de presentacion</button>
+        <div>
+            <h4>CONTACTO</h4>
+            <p>Telefono <br>a&apetscare@gmail.com <br>Bribane, QLD</p>
+        </div>
+        <div>
+            <a href="../pages/testimonios.html#galeria-de-fotos">
+                <button>GALERIA</button>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
