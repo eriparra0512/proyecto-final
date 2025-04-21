@@ -13,39 +13,71 @@ header{
     display: flex;
     align-items: center; 
     justify-content: space-between;
-width: 100%;
+    padding: 15px 20px;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* logo de la empresa*/
 
 header a img{
-    width: 200px;
-    height: auto;
+    height: 80px;
 }
 
 /* menu de navegacion*/
 /* ruta de especificidad*/
 header nav ul{
     display: flex;
-    gap: 40px;
+    gap: 20px;
     list-style: none;
-    text-align: center;
-    font-size: 28px;
-    margin-right: 20px;
+    padding: 0;
+    margin: 0;
 }
 
 header nav ul a{
     text-decoration: none;
     color: black;
+    font-weight: bold;
 }
 
-nav{
+#menu-toggle{
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        padding: 10px 0;
+    }
+}
+
+#menu-toggle:checked + .menu-icon + nav ul {
     display: flex;
-    list-style: none;
+}
+
+nav ul li {
+    text-align: center;
+    padding: 10px 0;
 }
 
 /*----------------------------------------------- estilos de main----------------------------------------------*/
 
+/*---------Banner-----------*/
 .hero{
     display: flex;
     justify-content: space-between;
@@ -59,7 +91,8 @@ nav{
     color: #7E5CAD;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    font-size: 26px;
+    text-align: center;
 }
 
 h1{
@@ -82,16 +115,16 @@ h1{
     color: white;
     border: none;
     padding: 15px 20px;
-    font-size: 1.2em;
+    font-size: 20px;
+    font-weight: bold;
     cursor: pointer;
     border-radius: 5px;
     margin-top: 15px;
-    align-self: flex-start;
+    align-self: flex-end;
 }
 
 .image{
     width: 50%;
-    text-align: right;
 }
 
 img{
@@ -99,20 +132,31 @@ img{
     height: auto;
 }
 
-/*ruta de especificidad para texto de presentacion de la empresa*/
-.presentacion{
+/* texto de presentancion y video*/
+.presentacion {
     color: #3f2b16; /*color texto*/
     text-align: center; /*posicion*/
     background-color: #fddbbb; /*relleno fondo*/
     font-size: 26px;
+    display: flex;
+    justify-content: right;
+
 }
 
+video {
+    width: 600px;
+    height: 300px;
+    margin-right: 25px;
+    border-radius: 15px;
+
+}
 
 /*modificacion a la seccion nuestros servicios*/
 /*huella de los subtitulos*/
 .imagen-subtitulos{
     width: 60px;
     height: auto;
+
 } 
 /*subtitulo nuestros servicios*/
 main section div h2{
@@ -124,14 +168,45 @@ main section div h2{
     border-radius: 10px;
 }
 
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
 
+.producto-index {
+    text-align: center;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.producto-index:hover{
+    transform: scale(1.05);
+}
+
+.producto-index img {
+    width: 140px;
+    height: 160px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.producto-index p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
 /*ruta de especificidad de parrafos de servicios*/
 main section div p{
     background-color: #81bfda;
     color: white;
     padding: 10px 20px;
     font-size: 22px;
-    display: inline-block;
     border-radius: 20px;
 }
 

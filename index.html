@@ -12,6 +12,11 @@
         <a href="index.html">
             <img src="img/marca.png" alt="Logotipo de proyecto pyppetscare">
         </a>
+
+        <!-- Menú hamburguesa  -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        
         <!-- etiqueta para menu de navegacion -->
         <nav>
             <!-- lista desordenda -->
@@ -48,10 +53,12 @@
             </div>
                     <img src="./img/meeting.png" alt="foto real de los dueños de la empresa acompañados de mascotas" class="image">
         </section>
-        <br>
         <!-- esta seccion  describe el enfoque de la empresa -->
         <section>
-            <div>
+            <div class="hero">
+                <video autoplay muted loop>
+                    <source src="./video/video.mp4.mp4">
+                </video>
                 <p class="presentacion"> Bienvenidos a A&A Pets Care, tus personas de confianza para el cuidado de mascotas. Sabemos lo importantes que son tus mascotas, ya sean peludos o con plumas, y estamos aquí para ofrecerte 
                     servicios de calidad que aseguren su bienestar y felicidad.
                     Con nuestra experiencia y un amor incondicional por los animales, nos comprometemos a cuidar de tus amigos, como si fueran nuestros.</p>
@@ -61,26 +68,26 @@
         <br>
         <!-- esta seccion es un resumen de los servicios que presta la empresa, como cada uno es un servicio diferente lo seccione con <div>, tambien cree el enlace para que desde esta parte 
             el cliente pueda acceder a la pagina de servicios-->
-        <section>
-            <div>
-                <img src="./img/huella-marca-white.png" alt="Icono de huella en un corazon" class="imagen-subtitulos">
+        <section class="seccion-productos">
+            <img src="./img/huella-marca-white.png" alt="Icono de huella en un corazon" class="imagen-subtitulos">
                 
                     <a href="./pages/servicios.html">
                         <h2>NUESTROS SERVICIOS</h2>
                     </a>
-                <div>
+            <div class="productos">
+                <div class="producto-index">
                     <img src="./img/cuidado-diurno.png" alt="Casa de mascotas con un sol, representacion del cuidado diurno">
-                    <p>CUIDADO DIURNO EN CASA</p>
+                    <p>CUIDADO DIURNO <br> EN CASA</p>
                 </div>
-                <div>
+                <div class="producto-index">
                     <img src="./img/cuidado-nocturno.png" alt="Casa para mascotas con una luna y estrellas, representando el cuidado nocturno">
-                    <p>CUIDADO NOCTURNO EN CASA</p>
+                    <p>CUIDADO NOCTURNO <br> EN CASA</p>
                 </div>
-                <div>
+                <div class="producto-index">
                     <img src="./img/visita-rapida.png" alt="Perro y gato junto a recipientes de comida y un corazon, representando la visita rapida">
                     <p>VISITA RAPIDA</p>
                 </div>
-                <div>
+                <div class="producto-index">
                     <img src="./img/servicio-de-paseo.png" alt="persona paseando a un perro con correa, representando el servicio de paseo">
                     <p>SERVICIO DE PASEO</p>
                 </div>
