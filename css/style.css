@@ -209,6 +209,39 @@ main section div p{
     font-size: 22px;
     border-radius: 20px;
 }
+
+
+@media (max-width: 768px) {
+    .hero {
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+    }
+
+    .hero .text h1 {
+    font-size: 1.8rem;
+    }
+
+    .cta-button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    }
+
+    .hero .image,
+    .hero video {
+    width: 100%;
+    max-width: 100%;
+    }
+
+    .presentacion {
+    font-size: 1rem;
+    text-align: justify;
+    }
+}
+
+
+
 /* ----------servicios----------*/
 /* SECCIÓN GENERAL */
 main section {
@@ -234,7 +267,7 @@ h2 {
     gap: 1rem;
 }
 
-  /* COLORES DIFERENCIADOS */
+/*-colores*/
 .servicio-uno {
     background-color: #e0f0ff;
 }
@@ -248,7 +281,7 @@ h2 {
     background-color: #ffe7ad;
 }
 
-  /* IMÁGENES DE SERVICIO */
+/* imagenes de servicios*/
 [class^="servicio-"] img {
     width: 100px;
     height: auto;
@@ -270,7 +303,7 @@ h2 {
     padding-left: 1.2rem;
 }
 
-  /* PRECIO Y BOTÓN */
+/* precios y boton*/
 .price {
     background-color: #ffffffcc;
     border-radius: 10px;
@@ -297,7 +330,7 @@ h2 {
     background-color: #0077aa;
 }
 
-  /* SECCIÓN FINAL */
+/*final seccion*/
 section:last-of-type {
     background-color: #f4f1fb;
     padding: 2rem;
@@ -316,7 +349,7 @@ section:last-of-type img {
     margin-top: 1rem;
 }
 
-  /* RESPONSIVE */
+
 @media screen and (min-width: 768px) {
     [class^="servicio-"] {
     flex-direction: row;
@@ -398,7 +431,7 @@ footer p {
     color: #333;
 }
 
-  /* Estilos para móviles */
+
 @media (max-width: 600px) {
     footer {
     flex-direction: column;
