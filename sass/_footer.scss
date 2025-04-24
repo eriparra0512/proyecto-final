@@ -1,0 +1,66 @@
+footer {
+    background-color: $color-secundario;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2rem;
+    text-align: left;
+    gap: 2rem;
+    border-top: 2px solid #ddd;
+  
+    img {
+      @include responsive-img(120px);
+    }
+  
+    button {
+      background-color: $color-principal;
+      color: white;
+      padding: 0.8rem 1.2rem;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: $color-hover;
+      }
+    }
+  
+    div {
+      max-width: 250px;
+  
+      h4 {
+        margin-bottom: 0.5rem;
+        color: #000000;
+      }
+  
+      p {
+        font-size: 0.95rem;
+        color: #333;
+      }
+    }
+  
+    // MODO MÓVIL
+    @media (max-width: 600px) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  
+      img {
+        margin-bottom: 1rem;
+      }
+  
+      button {
+        width: 90%;
+        max-width: 300px;
+      }
+  
+      div {
+        width: 100%;
+      }
+    }
+  }
+  

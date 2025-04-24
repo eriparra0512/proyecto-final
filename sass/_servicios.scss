@@ -1,0 +1,155 @@
+.seccion-productos {
+    text-align: center;
+
+    .imagen-subtitulos {
+    @include responsive-img(60px);
+    }
+
+    h2 {
+    @extend %hover-escalar;
+    }
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 2rem 1rem;
+}
+
+.producto-index {
+    text-align: center;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(8, 8, 8, 0.1);
+    background: #fff;
+    @extend %hover-escalar;
+
+    img {
+    @include responsive-img();
+    margin-bottom: 10px;
+    }
+
+    p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    }
+}
+
+.grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .servicio {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    align-items: flex-start;
+    text-align: left;
+  
+    img {
+      width: 100px;
+      flex-shrink: 0;
+    }
+  
+    h3 {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+  
+    p, ul {
+      font-size: 0.95rem;
+      margin: 0.5rem 0;
+    }
+  
+    .price {
+      background-color: #ffffffcc;
+      padding: 0.8rem;
+      border-radius: 10px;
+      text-align: center;
+      position: absolute;
+      right: 1.5rem;
+      bottom: 1.5rem;
+      max-width: 130px;
+  
+      a {
+        display: inline-block;
+        margin-top: 0.4rem;
+        padding: 0.4rem 1rem;
+        background-color: #b58edc;
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+  
+        &:hover {
+          background-color: #9e72c9;
+        }
+      }
+    }
+  }
+  
+  // Responsive solo si la pantalla es pequeña
+  @media (max-width: 768px) {
+    .servicio {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  
+      .price {
+        position: static;
+        margin-top: 1rem;
+        max-width: 100%;
+      }
+    }
+  }
+  
+// Colores personalizados para cada servicio
+.servicio-uno {
+    background-color: #e0f0ff;
+  }
+  .servicio-dos {
+    background-color: #c2e7f6;
+  }
+  .servicio-tres {
+    background-color: #fff5c7;
+  }
+  .servicio-cuatro {
+    background-color: #ffe7ad;
+  }
+  
+  // Sección de información adicional
+  .info-adicional {
+    padding: 2rem;
+    background-color: #f4f1fb;
+    border-radius: 15px;
+    text-align: center;
+  
+    h4 {
+      color: #9d79bc;
+      margin-bottom: 1rem;
+    }
+  
+    img {
+      width: 100px;
+      margin-top: 1rem;
+    }
+  
+    ul {
+      text-align: left;
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 0.95rem;
+      padding-left: 1.2rem;
+    }
+  }
+  

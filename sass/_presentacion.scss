@@ -1,0 +1,78 @@
+.presentacion-container {
+    @include flex-center-column;
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+    padding: 2rem;
+
+    video {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    }
+}
+
+.presentacion {
+    font-size: 1.1rem;
+    color: $color-texto;
+    text-align: justify;
+}
+//   nosotros  //
+.sobre-nosotros {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  
+    .titulo {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  
+    .persona-uno,
+    .persona-dos {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+  
+      img {
+        width: 200px;
+        border-radius: 40px;
+        margin: 20px;
+      }
+  
+      .info {
+        flex: 1;
+        padding: 10px;
+        text-align: center;
+  
+        h3 {
+          margin-top: 0;
+          color: #333;
+        }
+  
+        p {
+          color: #444;
+          line-height: 1.5;
+        }
+      }
+    }
+  
+    .persona-dos {
+      flex-direction: row-reverse;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .sobre-nosotros {
+      .persona-uno,
+      .persona-dos {
+        flex-direction: column;
+        text-align: center;
+  
+        .info {
+          text-align: center;
+        }
+      }
+    }
+  }
+  

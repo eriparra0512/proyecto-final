@@ -1,0 +1,30 @@
+.navbar {
+    background-color: $color-secundario !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    .navbar-brand img {
+    height: 60px;
+    }
+
+    .navbar-nav {
+    .nav-link {
+        font-weight: bold;
+        color: black;
+
+        &:hover {
+        color: #333;
+        }
+    }
+    }
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+        padding-bottom: 1rem;
+
+    .nav-item {
+        padding: 0.5rem 0;
+            }
+        }
+    }
+}
