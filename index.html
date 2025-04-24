@@ -3,109 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- link de mi bootstraps -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- link de mi css -->
+    <!-- link de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- link de CSS personalizado -->
     <link rel="stylesheet" href="css/style.css">
     <title>A&A Pets Care</title>
 </head>
 <body>
     <header>
-        <!-- BOOTSTRAP navbar -->
+        <!-- Navbar Bootstrap -->
         <nav class="navbar navbar-expand-md navbar-light bg-warning fixed-top">
             <div class="container-fluid">
-            <a class="navbar-brand fw-bold" href="index.html">
-                <img src="img/marca.png" alt="Logotipo de proyecto pyppetscare" height="30">
-            </a>
+                <a class="navbar-brand fw-bold" href="index.html">
+                    <img src="img/marca.png" alt="Logotipo de proyecto pyppetscare" height="30">
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-                <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
                     <ul class="navbar-nav text-center">
-                        <li class="nav-item">
-                            <a class="nav-link fw-bold" href="index.html">INICIO</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fw-bold" href="./pages/nosotros.html">NOSOTROS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fw-bold" href="./pages/servicios.html">SERVICIOS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fw-bold" href="./pages/testimonios.html">TESTIMONIOS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fw-bold" href="./pages/contacto.html">CONTACTO</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link fw-bold" href="index.html">INICIO</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold" href="./pages/nosotros.html">NOSOTROS</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold" href="./pages/servicios.html">SERVICIOS</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold" href="./pages/testimonios.html">TESTIMONIOS</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold" href="./pages/contacto.html">CONTACTO</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- etiqueta para contenido principal -->
     <main>
         <section class="hero">
             <div class="text"> 
-                <h1> Bienestar <br> felicidad y <br>cuidado para tu <br>amigo especial </h1>
-                <!-- etiqueta para subtitulo -->
+                <h1>Bienestar <br> felicidad y <br>cuidado para tu <br>amigo especial</h1>
                 <p class="subtitle">A&A Pets Care el mejor servicio para tu mascota</p>
-                <!-- boton para agendar, por ahora no lleva a ningun lado, la idea es que lleve a un formulario y calendario para agendar cita -->
                 <button class="cta-button">AGENDA SIN COSTO NUESTRA VISITA DE <br>PRESENTACION</button>
             </div>
-                    <img src="./img/meeting.png" alt="foto real de los dueños de la empresa acompañados de mascotas" class="image">
+            <img src="./img/meeting.png" alt="foto real de los dueños de la empresa con mascotas" class="image">
         </section>
-        <!-- esta seccion  describe el enfoque de la empresa -->
+
         <section>
-            <div class="hero">
+            <div class="presentacion-container">
                 <video autoplay muted loop>
                     <source src="./img/video.mp4.mp4">
                 </video>
-                <p class="presentacion"> Bienvenidos a A&A Pets Care, tus personas de confianza para el cuidado de mascotas. Sabemos lo importantes que son tus mascotas, ya sean peludos o con plumas, y estamos aquí para ofrecerte 
-                    servicios de calidad que aseguren su bienestar y felicidad.
-                    Con nuestra experiencia y un amor incondicional por los animales, nos comprometemos a cuidar de tus amigos, como si fueran nuestros.</p>
-                    <!-- en esta parte aun no estoy segura si poner un video o imagenes, en el wireframe plasme imagenes, pero no estoy segura -->
+                <p class="presentacion">Bienvenidos a A&A Pets Care, tus personas de confianza para el cuidado de mascotas. Sabemos lo importantes que son tus mascotas, ya sean peludos o con plumas, y estamos aquí para ofrecerte servicios de calidad que aseguren su bienestar y felicidad. Con nuestra experiencia y un amor incondicional por los animales, nos comprometemos a cuidar de tus amigos, como si fueran nuestros.</p>
             </div>
         </section>
-        <br>
-        <!-- esta seccion es un resumen de los servicios que presta la empresa, como cada uno es un servicio diferente lo seccione con <div>, tambien cree el enlace para que desde esta parte 
-            el cliente pueda acceder a la pagina de servicios-->
-        <section class="seccion-productos">
-            <img src="./img/huella-marca-white.png" alt="Icono de huella en un corazon" class="imagen-subtitulos">
-                
-                    <a href="./pages/servicios.html">
-                        <h2>NUESTROS SERVICIOS</h2>
-                    </a>
+
+        <section class="seccion-productos text-center">
+            <img src="./img/huella-marca-white.png" alt="Icono de huella" class="imagen-subtitulos">
+            <a href="./pages/servicios.html">
+                <h2>NUESTROS SERVICIOS</h2>
+            </a>
             <div class="productos">
                 <div class="producto-index">
-                    <img src="./img/cuidado-diurno.png" alt="Casa de mascotas con un sol, representacion del cuidado diurno">
+                    <img src="./img/cuidado-diurno.png" alt="Casa con sol">
                     <p>CUIDADO DIURNO <br> EN CASA</p>
                 </div>
                 <div class="producto-index">
-                    <img src="./img/cuidado-nocturno.png" alt="Casa para mascotas con una luna y estrellas, representando el cuidado nocturno">
+                    <img src="./img/cuidado-nocturno.png" alt="Casa con luna">
                     <p>CUIDADO NOCTURNO <br> EN CASA</p>
                 </div>
                 <div class="producto-index">
-                    <img src="./img/visita-rapida.png" alt="Perro y gato junto a recipientes de comida y un corazon, representando la visita rapida">
+                    <img src="./img/visita-rapida.png" alt="Comida y mascota">
                     <p>VISITA RAPIDA</p>
                 </div>
                 <div class="producto-index">
-                    <img src="./img/servicio-de-paseo.png" alt="persona paseando a un perro con correa, representando el servicio de paseo">
+                    <img src="./img/servicio-de-paseo.png" alt="Persona paseando perro">
                     <p>SERVICIO DE PASEO</p>
                 </div>
             </div>
         </section>
     </main>
-    <br>
 
-    <!-- etiqueta para pie de pagina-->
     <footer>
-        <img src="./img/marca.png" alt="Logotipo de proyecto pyppetscare.">
+        <img src="./img/marca.png" alt="Logotipo A&A">
         <button>Agenda sin costo <br>nuestra visita de presentacion</button>
         <div>
             <h4>CONTACTO</h4>
-            <p>Telefono <br>a&apetscare@gmail.com <br>Bribane, QLD</p>
+            <p>Telefono <br>a&apetscare@gmail.com <br>Brisbane, QLD</p>
         </div>
         <div>
             <a href="./pages/testimonios.html#galeria-de-fotos">

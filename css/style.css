@@ -49,10 +49,17 @@ body {
 /*---------Banner-----------*/
 .hero{
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
-    padding: 50px;
-    background: white;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.hero .text,
+.hero .image {
+flex: 1 1 100%;
+text-align: center;
 }
 
 .text{
@@ -61,7 +68,6 @@ body {
     display: flex;
     flex-direction: column;
     font-size: 26px;
-    text-align: center;
 }
 
 h1{
@@ -134,24 +140,65 @@ video {
     list-style: none;
 }
 
-.productos {
-    padding: 10px 20px;
-    display: inline-flex;
-    font-size: 30px;
+@media (min-width: 768px) {
+    .hero .text,
+    .hero .image {
+        flex: 1;
+        text-align: left;
+    }
+}
+
+.cta-button {
+    background-color: #81bfda;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.presentacion-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.presentacion-container video {
+    width: 100%;
+    max-width: 600px;
     border-radius: 10px;
+}
+
+.presentacion {
+    font-size: 1.1rem;
+    color: #3f2b16;
+    text-align: justify;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 2rem 1rem;
 }
 
 .producto-index {
     text-align: center;
     border-radius: 10px;
-    padding: 60px;
+    padding: 1.5rem;
     box-shadow: 0 2px 5px rgba(8, 8, 8, 0.1);
     transition: transform 0.3s;
+    background: #fff;
 }
 
 .producto-index img {
-    width: 140px;
-    height: 160px;
+    width: 120px;
+    height: 120px;
     object-fit: contain;
     margin-bottom: 10px;
 }
@@ -160,44 +207,6 @@ video {
     font-size: 16px;
     font-weight: bold;
     margin: 0;
-}
-/*ruta de especificidad de parrafos de servicios*/
-main section div p{
-    background-color: #81bfda;
-    color: white;
-    padding: 10px 20px;
-    font-size: 22px;
-    border-radius: 20px;
-}
-
-
-@media (max-width: 768px) {
-    .hero {
-    flex-direction: column;
-    padding: 1rem;
-    text-align: center;
-    }
-
-    .hero .text h1 {
-    font-size: 1.8rem;
-    }
-
-    .cta-button {
-    width: 100%;
-    padding: 1rem;
-    font-size: 1.1rem;
-    }
-
-    .hero .image,
-    .hero video {
-    width: 100%;
-    max-width: 100%;
-    }
-
-    .presentacion {
-    font-size: 1rem;
-    text-align: justify;
-    }
 }
 
 /*------------- nosotros--------*/
@@ -217,7 +226,7 @@ main section div p{
     display: flex;
     align-items: center;
     margin-bottom: 40px;
-    flex-wrap: wrap; /* permite que se acomode en móviles */
+    flex-wrap: wrap; 
 }
 
 .persona-dos{
@@ -225,7 +234,7 @@ main section div p{
     align-items: center;
     margin-bottom: 40px;
     flex-direction: row-reverse;
-    flex-wrap: wrap; /* permite que se acomode en móviles */
+    flex-wrap: wrap; 
 }
 
 .persona-uno img {
@@ -258,7 +267,7 @@ main section div p{
     line-height: 1.5;
 }
 
-/* Responsive para tablets y móviles */
+
 @media screen and (max-width: 768px) {
 .sobre-nosotros .persona-uno .persona-dos{
     flex-direction: column;
@@ -271,22 +280,101 @@ main section div p{
 }
 
 /* ----------servicios----------*/
-/* SECCIÓN GENERAL */
+/* --- Sección de Servicios General --- */
+.bloque-servicios {
+    padding: 2rem;
+    text-align: center;
+}
 
+.titulo-servicios {
+    margin-bottom: 2rem;
+}
 
-/*-- Tarjetas de servicios --*/
-[class^="servicio-"] {
+.imagen-subtitulos {
+    width: 60px;
+    height: auto;
+}
+
+  /* --- Tarjetas --- */
+.grid-servicios {
+display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+    align-items: stretch;
+}
+
+  /* --- Tarjeta individual --- */
+.servicio {
     background-color: #fff;
     border-radius: 15px;
     padding: 1.5rem;
-    margin-bottom: 2rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
     gap: 1rem;
+    text-align: left;
+    min-height: 280px;
+    padding-right: 9rem;
+    position: relative;
 }
 
-/*-colores*/
+  /* --- Imagen dentro de la tarjeta --- */
+.servicio img {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+    margin-right: 1rem;
+}
+
+  /* --- Título y contenido --- */
+.servicio h3 {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.servicio p,
+.servicio ul {
+    font-size: 0.95rem;
+    margin: 0.5rem 0;
+}
+
+  /* --- Caja de Precio --- */
+.price {
+    background-color: #ffffffcc;
+    border-radius: 10px;
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    text-align: center;
+    max-width: 130px;
+    position: absolute;
+    right: 1.5rem;
+    bottom: 1.5rem;
+}
+
+.price a {
+    background-color: #b58edc;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 0.4rem;
+    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.price a:hover {
+    background-color: #9e72c9;
+}
+
+  /* --- Colores personalizados por servicio --- */
 .servicio-uno {
     background-color: #e0f0ff;
 }
@@ -298,102 +386,71 @@ main section div p{
 }
 .servicio-cuatro {
     background-color: #ffe7ad;
+    min-width: 80%;
 }
 
-/* imagenes de servicios*/
-[class^="servicio-"] img {
-    width: 100px;
-    height: auto;
-    align-self: center;
-}
-
-  /* TEXTOS */
-[class^="servicio-"] h3 {
-    font-size: 1.3rem;
-    color: #333;
-    text-align: center;
-    }
-
-[class^="servicio-"] p {
-    margin: 0.5rem 0;
-}
-
-[class^="servicio-"] ul {
-    padding-left: 1.2rem;
-}
-
-/* precios y boton*/
-.price {
-    background-color: #ffffffcc;
-    border-radius: 10px;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.3rem;
-    font-weight: bold;
-    text-align: center;
-}
-
-.price a {
-    margin-top: 0.5rem;
-    background-color: #00aaff;
-    color: white;
-    padding: 0.5rem 1.2rem;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.price a:hover {
-    background-color: #0077aa;
-}
-
-/*final seccion*/
-section:last-of-type {
-    background-color: #f4f1fb;
+  /* --- Información adicional --- */
+.info-adicional {
     padding: 2rem;
+    background-color: #f4f1fb;
     border-radius: 15px;
     text-align: center;
 }
 
-section:last-of-type h4 {
-    font-size: 1.3rem;
+.info-adicional img {
+    width: 100px;
+    margin-top: 1rem;
+}
+
+.info-adicional h4 {
     color: #9d79bc;
     margin-bottom: 1rem;
 }
 
-section:last-of-type img {
-    width: 120px;
-    margin-top: 1rem;
-}
-
-
-@media screen and (min-width: 768px) {
-    [class^="servicio-"] {
-    flex-direction: row;
-    align-items: center;
+  /* --- Responsive --- */
+@media (max-width: 768px) {
+    .grid-servicios {
+        grid-template-columns: 1fr;
     }
 
-    [class^="servicio-"] img {
-    margin-right: 1rem;
+    .servicio {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
     }
 
-    [class^="servicio-"] div {
-    flex: 1;
+    .servicio img {
+        margin: 0 auto 1rem;
     }
 
-.price {
-    align-items: flex-start;
-    text-align: left;
-    max-width: 200px;
-    margin-left: auto;
+    .price {
+        position: static;
+        margin-top: 1rem;
+        max-width: 100%;
     }
 }
 
+/*-------boton contacto, testimonio y contacto--------*/
+
+.boton-contacto {
+    background-color: #b58edc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.boton-contacto:hover {
+    background-color: #9e72c9;
+    color: white;
+}
 
 
-/*---------------------------footer*---------------------------------/
+/*---------------------------------------footer*-----------------------------------------/
 /* ruta de especificidad imagen de logo*/
 
 footer{
@@ -415,13 +472,13 @@ footer img{
 
 /* ruta de especificidad de boton agenda cita y galeria*/
 footer button{
-    background-color: #81bfda; /*color fondo del boton*/
-    color: white; /*color del texto del boton en blanco*/
-    padding: 0.8rem 1.2rem; /*relleno del boton*/
-    border: none; /* son borde */
-    border-radius: 30px; /*Bordes redondos*/
-    font-size: 1rem; /*tamaño del texto*/
-    cursor: pointer; /*Cmabio de cursor al pasar el raton*/
+    background-color: #81bfda; 
+    color: white; 
+    padding: 0.8rem 1.2rem; 
+    border: none; 
+    border-radius: 30px; 
+    font-size: 1rem; 
+    cursor: pointer; 
 
 }
 

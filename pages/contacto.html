@@ -44,58 +44,66 @@
         </nav>
     </header>
     <main>
-        <div>
-            <img src="../img/huella-marca-white.png" alt="icono de huella en un corazon" class="imagen-subtitulos">
-            <h2>NOS ENCANTA ESCUCHAR SOBRE TI</h2>
-            <h3> <em>Dejanos tu mensaje y nos pondremos en contacto contigo</em></h3>
-        </div>
         <!-- etiqueta contenedora,  para formulario -->
-        <form action="/submit" method="post">
-            <label for="nombre">Nombre completo del responsable de la mascota</label>
-            <input type="text" name="nombre" id="nombre">
-
-            <label for="e-mail"> E-mail</label>
-            <input type="text" name="e-mail" id="e-mail">
-
-            <label for="telefono">Telefono</label>
-            <input type="text" name="telefono" id="telefono">
-
-            <label for="mensaje">Mensaje</label>
-            <textarea name="mensaje" id="mensaje"></textarea>
-        </form>
-
-        <form action="/submit" method="post">
-            <label for="nombre">Nombre de la mascota</label>
-            <input type="text" name="nombre" id="nombre">
-
-            <label for="edad">Edad de la mascota</label>
-            <input type="number" name="edad" id="edad" min="0" max="50" required>
-
-            <label for="mascota">Especie de la mascota </label>
-            <select name="" id="">
-                <option value="">Seleccionar</option>
-                <option value="">Perro</option>
-                <option value="">Gato</option>
-                <option value="">Ave</option>
-            </select>
-
-            <label for="raza">Tipo de raza de la mascota</label>
-            <input type="text" name="raza" id="raza">
-
-            <label for="servicio">Servicio de interes</label>
-            <select name="" id="">
-                <option value="">Seleccionar</option>
-                <option value="">Cuidado diurno</option>
-                <option value="">Cuidado nocturno</option>
-                <option value="">Visita al hogar</option>
-                <option value="">Paseo para perro</option>
-            </select>
-            <!-- boton de envio -->
-            <input type="submit" value="Enviar">
-        </form>
+        <section class="container mt-5 pt-5">
+            <div class="text-center mb-4">
+                <img src="../img/huella-marca-white.png" alt="icono de huella" height="50">
+                <h2 class="fw-bold mt-3">NOS ENCANTARÍA ESCUCHAR SOBRE TI</h2>
+                <p><em>Déjanos tu mensaje y nos pondremos en contacto contigo</em></p>
+            </div>
+            <form class="row g-4">
+        <!-- Columna izquierda (responsiva) -->
+            <div class="col-12 col-md-6">
+                <div class="form-group mb-3">
+                    <label for="nombre">Nombre completo del responsable de la mascota</label>
+                    <input type="text" class="form-control" style="background-color: #f3f8ff;" id="nombre" name="nombre">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="email">E-mail</label>
+                    <input type="email" class="form-control" style="background-color: #f3f8ff;" id="email" name="email">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" class="form-control" style="background-color: #f3f8ff;" id="telefono" name="telefono">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea class="form-control" rows="5" style="background-color: #f3f8ff;" id="mensaje" name="mensaje"></textarea>
+                </div>
+            </div>
+        <!-- Columna derecha (responsiva) -->
+            <div class="col-12 col-md-6">
+                <div class="form-group mb-3">
+                    <label for="nombreMascota">Nombre de la mascota</label>
+                    <input type="text" class="form-control" style="background-color: #fef6e9;" id="nombreMascota" name="nombreMascota">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="raza">Raza de la mascota</label>
+                    <input type="text" class="form-control" style="background-color: #fef6e9;" id="raza" name="raza">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="edad">Edad de la mascota</label>
+                    <input type="number" min="0" max="50" class="form-control" style="background-color: #fef6e9;" id="edad" name="edad">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="servicio">Servicio de Interés</label>
+                <select class="form-select" style="background-color: #fef6e9;" id="servicio" name="servicio">
+                    <option value="">Seleccionar</option>
+                    <option value="diurno">Cuidado diurno</option>
+                    <option value="nocturno">Cuidado nocturno</option>
+                    <option value="visita">Visita al hogar</option>
+                    <option value="paseo">Paseo para perro</option>
+                </select>
+                </div>
+            </div>
+        <!-- Botón enviar -->
+            <div class="col-12 text-end">
+                <button type="submit" class="boton-contacto">ENVIAR</button>
+            </div>
+            </form>
+        </section>
     </main>
     <br>
-
     <!-- etiqueta para pie de pagina-->
     <footer>
         <img src="../img/marca.png" alt="Logotipo de proyecto pyppetscare.">

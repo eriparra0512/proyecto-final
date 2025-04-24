@@ -44,56 +44,78 @@
         </nav>
     </header>
 <!--  seccion para poner testimonios de los clientes -->
-    <main>
-        <div>
-            <img src="../img/huella-marca-white.png" alt="Icono huella en un corazon" class="imagen-subtitulos">
-            <h2>LO QUE DICEN NUESTROS CLIENTES</h2>
-            <P> <em>¡Mascotas felices, dueños satisfechos!</em> </P>
-            <p>En A&A Pets Care, nuestra prioridad es que tu y tu mascota se sientan cuidados y felices. Mira lo que nuestros clientes tienen que decir.</p>
-        </div>
-        <div class="testimonios">
-            <div class="testimonio">
-                <img src="../img/avatar-mujer.png" alt="avatar para seccion testimonio.">
-                <h3>Luna y Claudia G.</h3>
-                <p>Deje a Luna al cuidado de Alejandra mientras salia de viaje, y no podria estar mas feliz con el servicio. !Mil gracias!</p>
-                <p>&starf; &starf; &starf; &starf; &starf;</p>
-            </div>
-        
-
-            <div class="testimonio">
-                <img src="../img/avatar-max.png" alt="avatar para seccion testimonio.">
-                <h3>Max.</h3>
-                <p>Nuestro cachorro Max ama sus paseos con Andres. Ha mejorado muchisimo gracias al cuidado personalizado. Estamos encantados.</p>
-                <p>&starf; &starf; &starf; &starf; &starf;</p>
-            </div>
-
-            <div class="testimonio">
-                <img src="../img/avatar-hombre.png" alt="avatar para seccion testimonio.">
-                <h3>Luis P..</h3>
-                <p>Andres es increible. Mi gato Simba es muy timido, pero con el se sintio en confianza de inmediato. Ahora no me preocupo cuando tengo que salir por trabajo. Lo recomiendo 100%.</p>
-                <p>&starf; &starf; &starf; &starf; &starf;</p>
+<main class="container py-5 mt-5">
+    <!-- Testimonios -->
+    <div class="text-center mb-5">
+        <img src="../img/huella-marca-white.png" alt="Icono huella en un corazón" class="mb-2" height="50">
+        <h2 class="fw-bold">LO QUE DICEN NUESTROS CLIENTES</h2>
+        <p><em>¡Mascotas felices, dueños satisfechos!</em></p>
+        <p>En A&A Pets Care, nuestra prioridad es que tú y tu mascota se sientan cuidados y felices. Mira lo que nuestros clientes tienen que decir:</p>
+    </div>
+    <div class="row text-center justify-content-center g-4">
+        <div class="col-md-4">
+            <div class="card bg-danger-subtle p-3 h-100">
+            <img src="../img/avatar-mujer.png" class="card-img-top mx-auto" style="width: 80px;" alt="avatar">
+                <div class="card-body">
+                <h5 class="card-title">Luna y Claudia G.</h5>
+                <p class="card-text">"Dejé a Luna al cuidado de Alejandra mientras salía de viaje, y no podía estar más feliz con el servicio. ¡Mil gracias!"</p>
+                <p class="text-warning fs-5">★★★★★</p>
+                </div>
             </div>
         </div>
-<!-- etiqueta para crear una galeria de fotos -->
-        <section>
-        <div>
-            <img src="../img/huella-marca-white.png" alt="Icono huella en un corazon">
-            <section id="galeria-de-fotos">
-                <h2>GALERIA</h2>
-            </section>
-            <h3>Conoce algunas de las mascotas felices que hemos cuidado</h3>
-            <div>
-                <img src="../img/imagen-galeria-uno.jpg" alt="foto de cuidadores conviviendo con mascota">
-                <img src="../img/imagen-galeria-dos.jpg" alt="foto de cuidadores con mascota">
-                <img src="../img/imagen-galeria-tres.jpg" alt="foto de cuidadores conviviendo con mascota">
-                <img src="../img/imagen-galeria-cuatro.jpg" alt="foto de cuidadores conviviendo con mascota">
-                <img src="../img/imagen-galeria-cinco.jpg" alt="foto de cuidadores conviviendo con mascota">
-                <img src="../img/imagen-galeria-seis.jpg" alt="foto de cuidadores conviviendo con mascota">
+        <div class="col-md-4">
+            <div class="card bg-success-subtle p-3 h-100">
+                <img src="../img/avatar-max.png" class="card-img-top mx-auto" style="width: 80px;" alt="avatar">
+                <div class="card-body">
+                    <h5 class="card-title">Max</h5>
+                    <p class="card-text">"Nuestro cachorro Max ama sus paseos con Andrés. Ha mejorado muchísimo gracias al cuidado personalizado."</p>
+                    <p class="text-warning fs-5">★★★★★</p>
+                </div>
             </div>
         </div>
-        </section>
-    </main>
-    <br>
+        <div class="col-md-4">
+            <div class="card bg-info-subtle p-3 h-100">
+                <img src="../img/avatar-hombre.png" class="card-img-top mx-auto" style="width: 80px;" alt="avatar">
+                <div class="card-body">
+                    <h5 class="card-title">Simba y Luis P.</h5>
+                    <p class="card-text">"Andrés es increíble. Mi gato Simba es muy tímido, pero con él se sintió en confianza de inmediato. ¡Lo recomiendo 100%!"</p>
+                    <p class="text-warning fs-5">★★★★★</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Galería -->
+    <section class="text-center mt-5" id="galeria-de-fotos">
+        <img src="../img/huella-marca-white.png" alt="Icono huella en un corazón" height="50">
+        <h2 class="fw-bold mt-2">GALERÍA</h2>
+        <p>Conoce algunas de las mascotas felices que hemos cuidado.</p>
+        <div class="row g-3">
+            <div class="col-6 col-md-4">
+                <img src="../img/imagen-galeria-uno.jpg" class="img-fluid rounded" alt="foto galería">
+            </div>
+            <div class="col-6 col-md-4">
+                <img src="../img/imagen-galeria-dos.jpg" class="img-fluid rounded" alt="foto galería">
+            </div>
+            <div class="col-6 col-md-4">
+                <img src="../img/imagen-galeria-tres.jpg" class="img-fluid rounded" alt="foto galería">
+            </div>
+            <div class="col-6 col-md-4">
+                <img src="../img/imagen-galeria-cuatro.jpg" class="img-fluid rounded" alt="foto galería">
+            </div>
+            <div class="col-6 col-md-4">
+                <img src="../img/imagen-galeria-cinco.jpg" class="img-fluid rounded" alt="foto galería">
+            </div>
+            <div class="col-6 col-md-4">
+                <img src="../img/imagen-galeria-seis.jpg" class="img-fluid rounded" alt="foto galería">
+            </div>
+        </div>
+    <!-- Botón final -->
+    <div class="mt-4">
+        <h5>¿Quieres que tu mascota tenga una experiencia igual?</h5>
+        <a href="../pages/contacto.html" class="boton-contacto mt-2">CONTÁCTANOS HOY</a>
+    </div>
+    </section>
+</main>
 
     <!-- etiqueta para pie de pagina-->
     <footer>
