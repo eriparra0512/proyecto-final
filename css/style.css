@@ -8,71 +8,40 @@
 }
 /*-------------------------------header----------------------------------------------*/
 
-header{
-    background-color: #fada7a;
-    display: flex;
-    align-items: center; 
-    justify-content: space-between;
-    padding: 15px 20px;
-    flex-wrap: wrap;
+body {
+    padding-top: 80px;
+}
+
+
+.navbar {
+    background-color: #fada7a !important;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* logo de la empresa*/
-
-header a img{
-    height: 80px;
+.navbar-brand img {
+    height: 60px;
 }
 
-/* menu de navegacion*/
-/* ruta de especificidad*/
-header nav ul{
-    display: flex;
-    gap: 20px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
 
-header nav ul a{
-    text-decoration: none;
-    color: black;
+.navbar-nav .nav-link {
     font-weight: bold;
+    color: black;
 }
 
-#menu-toggle{
-    display: none;
+.navbar-nav .nav-link:hover {
+    color: #333;
 }
 
-.menu-icon {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-    user-select: none;
-    padding: 10px;
-}
 
 @media (max-width: 768px) {
-    .menu-icon {
-        display: block;
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        background-color: white;
-        width: 100%;
-        padding: 10px 0;
-    }
-}
-
-#menu-toggle:checked + .menu-icon + nav ul {
-    display: flex;
-}
-
-nav ul li {
+    .navbar-nav {
     text-align: center;
-    padding: 10px 0;
+    padding-bottom: 1rem;
+    }
+
+    .navbar-nav .nav-item {
+    padding: 0.5rem 0;
+    }
 }
 
 /*----------------------------------------------- estilos de main----------------------------------------------*/
@@ -153,40 +122,31 @@ video {
 
 /*modificacion a la seccion nuestros servicios*/
 /*huella de los subtitulos*/
-.imagen-subtitulos{
+.seccion-productos .imagen-subtitulos{
     width: 60px;
     height: auto;
 
 } 
 /*subtitulo nuestros servicios*/
-main section div h2{
-    background-color: #fada7a;
-    color: black;
-    padding: 10px 20px;
-    font-size: 30px;
-    display: inline-block;
-    border-radius: 10px;
+
+.seccion-productos h2:hover{
+    transform: scale(1.05);
+    list-style: none;
 }
 
 .productos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    max-width: 1000px;
-    margin: auto;
+    padding: 10px 20px;
+    display: inline-flex;
+    font-size: 30px;
+    border-radius: 10px;
 }
 
 .producto-index {
     text-align: center;
     border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 60px;
+    box-shadow: 0 2px 5px rgba(8, 8, 8, 0.1);
     transition: transform 0.3s;
-}
-
-.producto-index:hover{
-    transform: scale(1.05);
 }
 
 .producto-index img {
@@ -240,22 +200,81 @@ main section div p{
     }
 }
 
+/*------------- nosotros--------*/
 
-
-/* ----------servicios----------*/
-/* SECCIÓN GENERAL */
-main section {
-    margin-bottom: 3rem;
+.sobre-nosotros {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
-    
-h2 {
+
+.sobre-nosotros .titulo {
     text-align: center;
-    margin-bottom: 2rem;
-    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.persona-uno{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap; /* permite que se acomode en móviles */
+}
+
+.persona-dos{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-direction: row-reverse;
+    flex-wrap: wrap; /* permite que se acomode en móviles */
+}
+
+.persona-uno img {
+    width: 200px;
+    height: auto;
+    border-radius: 40px;
+    margin: 20px;
+}
+
+.persona-dos img {
+    width: 200px;
+    height: auto;
+    border-radius: 40px;
+    margin: 20px;
+}
+
+.sobre-nosotros .info {
+    max-width: 500px;
+    padding: 10px;
+    text-align: center;
+}
+
+.sobre-nosotros h3 {
+    margin-top: 0;
     color: #333;
 }
 
-   /* TARJETAS DE SERVICIO */
+.sobre-nosotros p {
+    color: #444;
+    line-height: 1.5;
+}
+
+/* Responsive para tablets y móviles */
+@media screen and (max-width: 768px) {
+.sobre-nosotros .persona-uno .persona-dos{
+    flex-direction: column;
+    text-align: center;
+    }
+
+.sobre-nosotros .info {
+    text-align: center;
+    }
+}
+
+/* ----------servicios----------*/
+/* SECCIÓN GENERAL */
+
+
+/*-- Tarjetas de servicios --*/
 [class^="servicio-"] {
     background-color: #fff;
     border-radius: 15px;

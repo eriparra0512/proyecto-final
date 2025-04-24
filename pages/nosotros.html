@@ -3,60 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link de mi bootstraps -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- link de mi css -->
     <link rel="stylesheet" href="../css/style.css">
-    <title>A&A Pets Care - NOSOTROS</title>
+    <title>A&A Pets Care-CONTACTO</title>
 </head>
 <body>
     <header>
-            <a href="../index.html">
-                <img src="../img/marca.png" alt="Logotipo de proyecto pyppetscare">
+        <!-- BOOTSTRAP navbar -->
+        <nav class="navbar navbar-expand-md navbar-light bg-warning fixed-top">
+            <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="../index.html">
+                <img src="../img/marca.png" alt="Logotipo de proyecto pyppetscare" height="30">
             </a>
-            
-            <!-- Menú hamburguesa-->
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">&#9776;</label>
-        
-        <!-- etiqueta para menu de navegacion -->
-        <nav>
-            <!-- lista desordenda -->
-            <ul>
-                <li>
-                    <a href="../index.html">INICIO</a>
-                </li>
-                <li>
-                    <a href="">NOSOTROS</a>
-                </li>
-                <li>
-                    <a href="../pages/servicios.html">SERVICIOS</a>
-                </li>
-                <li>
-                    <a href="../pages/testimonios.html">TESTIMONIOS</a>
-                </li>
-                <li>
-                    <a href="../pages/contacto.html">CONTACTO</a>
-                </li>
-            </ul>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+                    <ul class="navbar-nav text-center">
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold" href="../index.html">INICIO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold" href="">NOSOTROS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold" href="../pages/servicios.html">SERVICIOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold" href="../pages/testimonios.html">TESTIMONIOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold" href="../pages/contacto.html">CONTACTO</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
         <!-- etiqueta contenido principal -->
 
-    <main>
-        <div> 
+    <main class="sobre-nosotros">
+        <div class="titulo"> 
             <img src="../img/huella-marca-white.png" alt="Icono de huella en un corazon" class="imagen-subtitulos">
             <h2>SOBRE NOSOTROS</h2>
         </div>
         <!-- etiqueta para seccionar la foto y texto de presentacion de las personas de la empresa -->
-        <div>
+        <div class="persona-uno">
             <img src="../img/aleja-Presentacion.png" alt="fotografia de una de las cuidadoras">
-            <h3> <strong>Soy Alejandra</strong></h3>
-            <p> Trabajar con mascotas es una de las cosas que más disfruto en la vida. Cada animal tiene su propia personalidad, y me encanta crear un vínculo especial con ellos mientras me aseguro de que estén felices y bien cuidados. Para mí, <em>el bienestar de las mascotas siempre será una prioridad</em> , porque sé lo importante que son para sus familias.</p>
+            <div class="info">
+                <h3> <strong>Soy Alejandra</strong></h3>
+                <p> Trabajar con mascotas es una de las cosas que más disfruto en la vida. Cada animal tiene su propia personalidad, y me encanta crear un vínculo especial con ellos mientras me aseguro de que estén felices y bien cuidados. Para mí, <em>el bienestar de las mascotas siempre será una prioridad</em> , porque sé lo importante que son para sus familias.</p>
+            </div>
         </div>
-        <div> 
+        <div class="persona-dos"> 
             <img src="../img/andres-presentacion.png" alt="fotografia de uno de los cuidadores">
-            <h3> <strong> Soy Andres</strong></h3>
-            <p>Siempre he tenido un amor especial por los animales, y trabajar con ellos me llena de satisfacción. <em>Cuidarlos no solo es un compromiso, sino una oportunidad para ofrecerles atención, compañía y seguridad.</em> Mi meta es hacer que tanto las mascotas como sus dueños se sientan tranquilos y confiados en mi trabajo.</p>
+            <div class="info">
+                <h3> <strong> Soy Andres</strong></h3>
+                <p>Siempre he tenido un amor especial por los animales, y trabajar con ellos me llena de satisfacción. <em>Cuidarlos no solo es un compromiso, sino una oportunidad para ofrecerles atención, compañía y seguridad.</em> Mi meta es hacer que tanto las mascotas como sus dueños se sientan tranquilos y confiados en mi trabajo.</p>
+            </div>
         </div>
     </main>
     <br>
